@@ -1,0 +1,97 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+ 
+<tiles-definitions>
+  
+<!-- 사용자 서브-->
+    <definition name="web" template="/WEB-INF/views/web/tiles/template.jsp" preparer="WebMenuPreparer">
+        <put-attribute name="left"   value="/WEB-INF/views/web/tiles/left.jsp" />
+        <put-attribute name="header" value="/WEB-INF/views/web/tiles/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/web/tiles/footer.jsp" />
+    </definition> 
+    
+    <definition name="web/*.page" extends="web">
+        <put-attribute name="header" value="/WEB-INF/views/web/tiles/header.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}.jsp" />
+    </definition>
+ 
+     <definition name="web/*/*.page" extends="web">
+         <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}.jsp" />
+     </definition>
+    
+    <definition name="web/*/*/*.page" extends="web">
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}/{3}.jsp" />
+    </definition>
+    
+    <definition name="web/*/*/*/*.page" extends="web">
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    
+    
+    <!-- 메뉴 미표시 -->
+    <definition name="webPart" template="/WEB-INF/views/web/tiles/templatePart.jsp">
+    </definition>
+    
+    <definition name="web/*.part" extends="webPart">
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}.jsp" />
+    </definition>
+ 
+     <definition name="web/*/*.part" extends="webPart">
+         <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}.jsp" />
+     </definition>
+    
+    <definition name="web/*/*/*.part" extends="webPart">
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}/{3}.jsp" />
+    </definition>  
+    
+    <definition name="web/*/*/*/*.part" extends="webPart">
+        <put-attribute name="body" value="/WEB-INF/views/web/{1}/{2}/{3}/{4}.jsp" />
+    </definition>        
+    
+<!-- 관리자 -->
+    <!-- 메뉴 표시 -->
+    <definition name="admin" template="/WEB-INF/views/admin/tiles/template.jsp" preparer="AdminMenuPreparer">
+        <put-attribute name="left"   value="/WEB-INF/views/admin/tiles/left.jsp" />
+        <put-attribute name="header" value="/WEB-INF/views/admin/tiles/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/admin/tiles/footer.jsp" />
+    </definition>
+    
+ 
+    <definition name="admin/*.page" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp" />
+    </definition>
+ 
+     <definition name="admin/*/*.page" extends="admin">
+         <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}.jsp" />
+     </definition>
+    
+    <definition name="admin/*/*/*.page" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}.jsp" />
+    </definition>
+    
+    <definition name="admin/*/*/*/*.page" extends="admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}/{4}.jsp" />
+    </definition>
+    
+    
+    <!-- 메뉴 미표시 -->
+    <definition name="adminPart" template="/WEB-INF/views/admin/tiles/templatePart.jsp">
+    </definition>
+    
+    <definition name="admin/*.part" extends="adminPart">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp" />
+    </definition>
+ 
+     <definition name="admin/*/*.part" extends="adminPart">
+         <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}.jsp" />
+     </definition>
+    
+    <definition name="admin/*/*/*.part" extends="adminPart">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}.jsp" />
+    </definition>  
+    
+    <definition name="admin/*/*/*/*.part" extends="adminPart">
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}/{2}/{3}/{4}.jsp" />
+    </definition>        
+</tiles-definitions>

@@ -1,0 +1,24 @@
+.catWrapSelected {
+	background-color : #FFC107;
+} 
+
+.h2 span {
+	font-size : medium;
+}
+
+.datepicker {
+	width : 100px;
+} 
+
+.move {
+	cursor : pointer;
+}
+
+.help {
+	font-size:8pt;
+}
+/* 왜 했지?
+.table div:not(.row){
+	border:1px solid #cfcfcf;
+}
+ */

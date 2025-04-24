@@ -1,0 +1,99 @@
+.popup_wrap {
+	width: 660px; 
+}
+.popup_wrap h2 {
+	width: 100%;
+	background: #5e81c3;
+	border-bottom: 4px solid #b7d2f0;
+	padding: 10px 0;
+}
+.popup_wrap h2 img {
+	margin-left: 15px;
+}
+.popup_wrap ul {
+	padding: 15px;
+}
+.popup_wrap h3 {
+	width: 100%;
+	font-size: 16px;
+	color: #0066cc;
+	padding: 10px 0;
+}
+.popup_wrap input[type='radio'] {
+	border: 0;
+	margin: 0 0 3px 0;
+	vertical-align: middle;
+}
+.popup_wrap p.info {
+	margin: 0 0 8px 0;
+}
+.popup_wrap p.info img {
+	margin: -2px 5px 0 0;
+}
+.popup_wrap .btn_close {
+	margin: 12px;
+	float: right
+}
+
+
+.popup_wrap2 div, .popup_wrap2 p, .popup_wrap2 td, .popup_wrap2 th, .popup_wrap2 button, .popup_wrap2 h2, .popup_wrap2 h3, .popup_wrap2 a{font-family: 'Noto Sans KR', 'Malgun Gothic', '¸¼Àº °íµñ'}
+.popup_wrap2 h2{background: #302f2e; border-bottom:none; color:#fff; font-weight:bold !important; font-size:20px; letter-spacing:-1px; padding:10px 0 15px 15px; }
+.popup_wrap2 h3{color:#333;}
+.popup_wrap2 .popup_view {border-top: 2px solid #888888; border-bottom:none;}
+.popup_wrap2 .popup_view th {background: #fafafa; border-bottom: 1px solid #ddd;}
+.popup_wrap2 .popup_view td {border-bottom: 1px solid #ddd;}
+
+.popup_wrap2 .btn {outline: 0 !important; border-radius: 0; display:inline-block;}
+.popup_wrap2 .btn.dark {background:#373737;border-color:#373737;color:#fff;}
+
+
+.popup_list {
+	width: 100%;
+	border-bottom: 2px solid #b0c6dd;
+	border-top: 2px solid #b0c6dd;
+}
+.popup_list th {
+	background: #f2f5fc;
+	padding: 8px 0;
+}
+.popup_list td {
+	border-bottom: 1px solid #e8e8e8;
+	text-align: center
+}
+.popup_view {
+	width: 100%;
+	border-bottom: 2px solid #b0c6dd;
+	border-top: 2px solid #b0c6dd;
+}
+.popup_view th {
+	background: #f2f5fc;
+	text-align: left;
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.popup_view td {
+	text-align: left;
+	padding: 8px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.popup_view input {
+	padding: 0 2px;
+	border: 1px solid #cbcbcb
+}
+.mr_t5 {
+	margin-top: 5px;
+}
+.font11 {
+	font-size: 11px;
+}
+.cbtn {
+	width: 100%;
+	margin: 15px 0;
+	text-align: center;
+}
+.mr_b20 {
+	margin-bottom: 20px;
+}
+.popup_note {
+	margin: 0 0 20px 0
+}
