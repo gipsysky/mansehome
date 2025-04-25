@@ -19,7 +19,7 @@
                     </ul>
                     <div class="download" data-aos="fade-in">
                         <a href="#">회사 소개서 다운로드하기</a>
-                        <a href="/request">프로젝트 의뢰</a>
+                        <a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a>
                     </div>
                 </div>
             </div>
