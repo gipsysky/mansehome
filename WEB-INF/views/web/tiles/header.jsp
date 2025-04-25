@@ -49,7 +49,7 @@
                         <li><a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a></li>
                         <li><a href="/web/board/data/list?idTbl_cnf=60">고객센터</a></li>
                     </ul>
-                    <span>회사 소개서 다운로드하기</span>
+                    <span><a href="#">회사 소개서 다운로드하기</a></span>
                 </div>
             </div>
         </div>
