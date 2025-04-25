@@ -35,7 +35,7 @@
             <section class="main-slide">
                 <div class="bn">
                     © Mansecommunication Co.,Ltd.All rights reserved.
-                    <a href="#"><img src="img/bn_request.png" alt="프로젝트문의"></a>
+                    <a href="/web/board/data/write?pageNum=1&idTbl_cnf=6"><img src="img/bn_request.png" alt="프로젝트문의"></a>
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">

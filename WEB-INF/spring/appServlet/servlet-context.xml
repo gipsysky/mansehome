@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/css/**" location="/css/" />	
+	<resources mapping="/js/**" location="/js/" />	
+	<resources mapping="/script/**" location="/script/" />	
+	<resources mapping="/img/**" location="/img/" />
+    <resources mapping="/images/**" location="/images/" />
+    <resources mapping="/fonts/**" location="/fonts/" />
+	<resources mapping="/BotDetect/**" location="/BotDetect/" />
+<!--개발-->
+<!--    <resources mapping="/uploadFile/**" location="file:///E:/intelliJ-workspace2/uploadFile/" />-->
+<!--실서버-->
+    <resources mapping="/uploadFile/**" location="file:///C:/HomePage/mansehome/uploadFile/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="order" value="2"/>
+	</beans:bean>
+     
+    <!-- Tiles -->
+    <beans:bean id="WebMenuPreparer" class="com.manse.settings.menu.WebMenuPreparer"></beans:bean>
+    <beans:bean id="AdminMenuPreparer" class="com.manse.settings.menu.AdminMenuPreparer"></beans:bean>
+    <beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <beans:property name="definitions">
+            <beans:list>
+                <beans:value>/WEB-INF/views/tiles.xml</beans:value>
+            </beans:list>
+        </beans:property>
+        <beans:property name="preparerFactoryClass" value="org.springframework.web.servlet.view.tiles3.SpringBeanPreparerFactory"></beans:property>
+    </beans:bean>        
+    <beans:bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+        <beans:property name="order" value="1" />
+    </beans:bean>
+
+    <!-- Interceptor -->
+    <interceptors>
+
+        <!-- 기본 (자동로그인 처리) -->
+        <interceptor>
+            <mapping path="/admin/**"/>
+            <beans:bean id="AdminInterceptor" class="com.manse.common.AdminInterceptor"/>
+        </interceptor>
+
+        <interceptor>
+           <mapping path="/admin/**"/>
+           <exclude-mapping path="/admin/sessionCheck.json"/>
+           <exclude-mapping path="/admin/location/locationXmlHttp"/>
+           <exclude-mapping path="/admin/display/**"/>
+           <exclude-mapping path="/admin/uploadFile/**"/>
+           <exclude-mapping path="/admin/common/**"/>
+           <exclude-mapping path="/admin/member/login"/>
+           <exclude-mapping path="/admin/member/loginOk"/>
+           <exclude-mapping path="/admin/member/logout"/>
+           <exclude-mapping path="/resources/**"/>
+           <exclude-mapping path="/js/**"/>
+           <beans:bean id="loginInterceptor" class="com.manse.common.AdminLoginInterceptor"/>
+       </interceptor>
+ 
+       <interceptor>
+           <mapping path="/admin/**"/>
+           <exclude-mapping path="/admin/sessionCheck.json"/>
+           <exclude-mapping path="/admin/location/locationXmlHttp"/>
+           <exclude-mapping path="/admin/display/**"/>
+           <exclude-mapping path="/admin/uploadFile/**"/>
+           <exclude-mapping path="/admin/common/**"/>
+           <exclude-mapping path="/admin/home/result/**"/>
+           <exclude-mapping path="/admin/member/login"/>
+           <exclude-mapping path="/admin/member/loginOk"/>
+           <exclude-mapping path="/admin/member/logout"/>
+           <exclude-mapping path="/resources/**"/>
+           <exclude-mapping path="/js/**"/>
+           <beans:bean id="authInterceptor" class="com.manse.common.AdminAuthInterceptor"/>
+       </interceptor>
+
+        <!-- 기본 (자동로그인 처리) -->
+       <interceptor>
+           <mapping path="/**"/>
+           <exclude-mapping path="/etc/snsLogin/**"/>
+           <beans:bean id="WebInterceptor" class="com.manse.common.WebInterceptor"/>
+       </interceptor>
+
+        <!-- 로그인이 안되어있으면 로그인 페이지로 리다이렉트 하기 위한 URL 구성 -->
+       <interceptor>
+           <mapping path="/web/u/**"/> 
+           <beans:bean id="WebLoginInterceptor" class="com.manse.common.WebLoginInterceptor"/>
+       </interceptor>
+
+        <!-- 로그인이 안되어있으면 로그인 페이지로 리다이렉트 하기 위한 URL 구성  (관리자) -->
+       <interceptor>
+           <mapping path="/web/u/a/**"/> 
+           <beans:bean id="WebAuthInterceptor" class="com.manse.common.WebAuthInterceptor"/>
+       </interceptor>
+    </interceptors>
+
+    
+	<context:component-scan base-package="com.manse.home"/>
+	<context:component-scan base-package="com.manse.member.managerGroup"/>
+	<context:component-scan base-package="com.manse.member.manager"/>
+	<context:component-scan base-package="com.manse.member.userGroup"/>
+	<context:component-scan base-package="com.manse.member.user"/>
+	<context:component-scan base-package="com.manse.settings.codes"/>
+	<context:component-scan base-package="com.manse.settings.menu"/>
+	<context:component-scan base-package="com.manse.member.login"/>
+	<context:component-scan base-package="com.manse.member.vendor"/>
+	<context:component-scan base-package="com.manse.board.cnf"/>
+	<context:component-scan base-package="com.manse.board.data"/>
+    <context:component-scan base-package="com.manse.etc"/>
+    <context:component-scan base-package="com.manse.operation"/>
+    <context:component-scan base-package="com.manse.settings.accessIp"/>
+
+</beans:beans>

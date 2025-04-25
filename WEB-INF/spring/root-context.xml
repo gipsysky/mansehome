@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+    <!-- MySQL JDBC DataSource -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"/>
+		<property name="url" value="jdbc:log4jdbc:mysql://localhost:3306/mansehome?serverTimezone=Asia/Seoul&amp;allowMultiQueries=true"/>
+
+<!--		<property name="driverClassName" value="org.mariadb.jdbc.Driver"/>-->
+<!--		<property name="url" value="jdbc:mariadb://localhost:3307/shop?serverTimezone=Asia/Seoul&amp;allowMultiQueries=true&amp;gssapiAuth=false"/>-->
+
+		<property name="username" value="mansehome"/>
+        <property name="password" value="akstpgha1999!"/>
+    </bean>
+    <bean id="sqlSessionFactory" name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation"  value="classpath:/mybatis-config.xml" />
+        <property name="mapperLocations" value="classpath:/**/*Mapper.xml"/>
+    </bean>
+     <bean id="sqlSession" name="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg ref="sqlSessionFactory" />
+    </bean>
+
+	<!--  파일업로드 용량 (10MB)-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	  <property name="maxUploadSize" value="10485760"/>
+	  <property name="defaultEncoding" value="UTF-8" />
+	</bean> 
+	
+	<!-- json 으로 출력하기 위한 설정 -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="0"/>
+	</bean>
+	<bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+		<property name="contentType" value="application/json;charset=UTF-8"/>
+	</bean>
+  
+	<mybatis-spring:scan base-package="com.manse.member.managerGroupMapper"/>
+	<context:component-scan base-package="com.manse.member.managerGroup"/>
+	 
+	<mybatis-spring:scan base-package="com.manse.member.managerMapper"/> 
+	<context:component-scan base-package="com.manse.member.manager"/>	
+  
+	<mybatis-spring:scan base-package="com.manse.member.userGroupMapper"/>
+	<context:component-scan base-package="com.manse.member.userGroup"/>
+	 
+	<mybatis-spring:scan base-package="com.manse.member.userMapper"/> 
+	<context:component-scan base-package="com.manse.member.user"/>	
+	
+	<mybatis-spring:scan base-package="com.manse.settings.codesMapper"/>
+	<context:component-scan base-package="com.manse.settings.codes"/>
+	
+	<mybatis-spring:scan base-package="com.manse.settings.menuMapper"/>
+	<context:component-scan base-package="com.manse.settings.menu"/>
+
+	<mybatis-spring:scan base-package="com.manse.member.loginMapper"/>
+	<context:component-scan base-package="com.manse.member.login"/> 
+	
+	<mybatis-spring:scan base-package="com.manse.member.vendorMapper"/>
+	<context:component-scan base-package="com.manse.member.vendor"/>
+	
+	<mybatis-spring:scan base-package="com.manse.board.cnfMapper"/>
+	<context:component-scan base-package="com.manse.board.cnf"/> 
+	
+	<mybatis-spring:scan base-package="com.manse.board.dataMapper"/>
+	<context:component-scan base-package="com.manse.board.data"/>
+
+	<mybatis-spring:scan base-package="com.manse.operationMapper"/>
+	<context:component-scan base-package="com.manse.operation"/>
+
+	<mybatis-spring:scan base-package="com.manse.settings.accessIpMapper"/>
+	<context:component-scan base-package="com.manse.settings.accessIp"/>
+</beans>
