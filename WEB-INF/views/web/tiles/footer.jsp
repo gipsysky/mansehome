@@ -8,7 +8,7 @@
 <footer>
   <div class="container">
     <div class="logo">만세커뮤니케이션 <small>© Mansecommunication Co.,Ltd.All rights reserved.</small></div>
-    <address>서울특별시 금천구 가산디지털1로 24, 901(가산동,대륭테크노타운 13차)
+    <address>서울특별시 금천구 가산디지털 1로 24, 901(가산동,대륭테크노타운 13차)
       <ul>
         <li><span>TEL </span> 02-2088-2110</li>
         <li><span>H.P </span> 010-8822-1126</li>
