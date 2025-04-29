@@ -8,22 +8,14 @@
 <footer>
   <div class="container">
     <div class="logo">만세커뮤니케이션 <small>© Mansecommunication Co.,Ltd.All rights reserved.</small></div>
-<<<<<<< HEAD
-    <address>서울특별시 금천구 가산디지털1로 24, 901(가산동,대륭테크노타운 13차)
-=======
     <address>서울특별시 금천구 가산디지털 1로 24, 901(가산동,대륭테크노타운 13차)
->>>>>>> a20b22d0ae3993391ba0dea15c73cc7e7987b329
       <ul>
         <li><span>TEL </span> 02-2088-2110</li>
         <li><span>H.P </span> 010-8822-1126</li>
         <li><span>MAIL</span>  pm@manse.co.kr</li>
       </ul>
     </address>
-<<<<<<< HEAD
     <div class="request" onClick="javascript:document.location.href='/web/board/data/list?idTbl_cnf=60';">
-=======
-    <div class="request" onClick="javascript:document.location.href='/request';">
->>>>>>> a20b22d0ae3993391ba0dea15c73cc7e7987b329
       <small>REQUEST</small>프로젝트 문의
     </div>
     <div id="quick-btns">

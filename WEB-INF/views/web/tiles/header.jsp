@@ -14,8 +14,8 @@
                 <div id="gnb">
                     <!-- 해당페이지 진입시 li .active 추가 -->
                     <ul>
-                        <li><a href="/company">회사소개</a></li>
-                        <li><a href="/portfolios">포트폴리오</a></li>
+                        <li><a href="/web/company">회사소개</a></li>
+                        <li><a href="/web/portfolios">포트폴리오</a></li>
                         <li><a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a></li>
                         <li><a href="/web/board/data/list?idTbl_cnf=60">고객센터</a></li>
                         <li class="toggle-gnb"><a href="#">MENU<span></span><span></span><span></span></a></li>
@@ -44,12 +44,12 @@
                 </div>
                 <div class="right">
                     <ul>
-                        <li><a href="/company">회사소개</a></li>
-                        <li><a href="/portfolios">포트폴리오</a></li>
+                        <li><a href="/web/company">회사소개</a></li>
+                        <li><a href="/web/portfolios">포트폴리오</a></li>
                         <li><a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a></li>
                         <li><a href="/web/board/data/list?idTbl_cnf=60">고객센터</a></li>
                     </ul>
-                    <span><a href="#">회사 소개서 다운로드하기</a></span>
+                    <span>회사 소개서 다운로드하기</span>
                 </div>
             </div>
         </div>

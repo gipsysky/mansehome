@@ -123,5 +123,6 @@
     <context:component-scan base-package="com.manse.etc"/>
     <context:component-scan base-package="com.manse.operation"/>
     <context:component-scan base-package="com.manse.settings.accessIp"/>
+    <context:component-scan base-package="com.manse.logs.access"/>
 
 </beans:beans>
