@@ -48,7 +48,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h24.png" alt=""></div>
+                                    <div class="img"><img src="/img/h24.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2024</div>
                                         <ol>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h23.png" alt=""></div>
+                                    <div class="img"><img src="/img/h23.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2023</div>
                                         <ol>
@@ -75,7 +75,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h22.png" alt=""></div>
+                                    <div class="img"><img src="/img/h22.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2022</div>
                                         <ol>
@@ -90,7 +90,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h21.png" alt=""></div>
+                                    <div class="img"><img src="/img/h21.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2021</div>
                                         <ol>
@@ -105,7 +105,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h18.png" alt=""></div>
+                                    <div class="img"><img src="/img/h18.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2018</div>
                                         <ol>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h15.png" alt=""></div>
+                                    <div class="img"><img src="/img/h15.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2015</div>
                                         <ol>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h14.png" alt=""></div>
+                                    <div class="img"><img src="/img/h14.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2014</div>
                                         <ol>
@@ -156,7 +156,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h13.png" alt=""></div>
+                                    <div class="img"><img src="/img/h13.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2013</div>
                                         <ol>
@@ -171,7 +171,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h11.png" alt=""></div>
+                                    <div class="img"><img src="/img/h11.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2011</div>
                                         <ol>
@@ -188,7 +188,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h07.png" alt=""></div>
+                                    <div class="img"><img src="/img/h07.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2007</div>
                                         <ol>
@@ -208,7 +208,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h05.png" alt=""></div>
+                                    <div class="img"><img src="/img/h05.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2005</div>
                                         <ol>
@@ -224,7 +224,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="inner">
-                                    <div class="img"><img src="img/h01.png" alt=""></div>
+                                    <div class="img"><img src="/img/h01.png" alt=""></div>
                                     <div class="info">
                                         <div class="year">2001</div>
                                         <ol>
@@ -280,13 +280,13 @@
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><span><img src="img/office1.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office2.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office3.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office4.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office5.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office6.png" alt=""></span></div>
-                        <div class="swiper-slide"><span><img src="img/office7.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office1.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office2.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office3.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office4.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office5.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office6.png" alt=""></span></div>
+                        <div class="swiper-slide"><span><img src="/img/office7.png" alt=""></span></div>
                     </div>
                 </div>
                 <script>
@@ -335,26 +335,26 @@
                 <div class="container">
                     <h3>CLIENT</h3>
                     <ul class="client-list">
-                        <li data-aos="fade-left" class="bccard"><img src="img/c_logo1.png" alt=""></li>
-                        <li data-aos="fade-left" class="KT"><img src="img/c_logo21.png" alt=""></li>
-                        <li data-aos="fade-left" class="samsung"><img src="img/c_logo3.png" alt=""></li>
-                        <li data-aos="fade-left" class="sk"><img src="img/c_logo4.png" alt=""></li>
-                        <li data-aos="fade-left" class="acuvue"><img src="img/c_logo5.png" alt=""></li>
-                        <li data-aos="fade-left" class="airforce"><img src="img/c_logo6.png" alt=""></li>
-                        <li data-aos="fade-left" class="landrover"><img src="img/c_logo7.png" alt=""></li>
-                        <li data-aos="fade-left" class="shooting"><img src="img/c_logo24.png" alt=""></li>
-                        <li data-aos="fade-left" class="chesundang"><img src="img/c_logo9.png" alt=""></li>
-                        <li data-aos="fade-left" class="kintex"><img src="img/c_logo23.png" alt=""></li>
-                        <li data-aos="fade-left" class="sinhanbank"><img src="img/c_logo11.png" alt=""></li>
-                        <li data-aos="fade-left" class="seongnam"><img src="img/c_logo25.png" alt=""></li>
-                        <li data-aos="fade-left" class="wooribank"><img src="img/c_logo13.png" alt=""></li>
-                        <li data-aos="fade-left" class="sbs"><img src="img/c_logo14.png" alt=""></li>
-                        <li data-aos="fade-left" class="chunjae"><img src="img/c_logo15.png" alt=""></li>
-                        <li data-aos="fade-left" class="i815"><img src="img/c_logo16.png" alt=""></li>
-                        <li data-aos="fade-left" class="byc"><img src="img/c_logo17.png" alt=""></li>
-                        <li data-aos="fade-left" class="busanbank"><img src="img/c_logo26.png" alt=""></li>
-                        <li data-aos="fade-left" class="donga-otsuka"><img src="img/c_logo22.png" alt=""></li>
-                        <li data-aos="fade-left" class="nest"><img src="img/c_logo20.png" alt=""></li>
+                        <li data-aos="fade-left" class="bccard"><img src="/img/c_logo1.png" alt=""></li>
+                        <li data-aos="fade-left" class="KT"><img src="/img/c_logo21.png" alt=""></li>
+                        <li data-aos="fade-left" class="samsung"><img src="/img/c_logo3.png" alt=""></li>
+                        <li data-aos="fade-left" class="sk"><img src="/img/c_logo4.png" alt=""></li>
+                        <li data-aos="fade-left" class="acuvue"><img src="/img/c_logo5.png" alt=""></li>
+                        <li data-aos="fade-left" class="airforce"><img src="/img/c_logo6.png" alt=""></li>
+                        <li data-aos="fade-left" class="landrover"><img src="/img/c_logo7.png" alt=""></li>
+                        <li data-aos="fade-left" class="shooting"><img src="/img/c_logo24.png" alt=""></li>
+                        <li data-aos="fade-left" class="chesundang"><img src="/img/c_logo9.png" alt=""></li>
+                        <li data-aos="fade-left" class="kintex"><img src="/img/c_logo23.png" alt=""></li>
+                        <li data-aos="fade-left" class="sinhanbank"><img src="/img/c_logo11.png" alt=""></li>
+                        <li data-aos="fade-left" class="seongnam"><img src="/img/c_logo25.png" alt=""></li>
+                        <li data-aos="fade-left" class="wooribank"><img src="/img/c_logo13.png" alt=""></li>
+                        <li data-aos="fade-left" class="sbs"><img src="/img/c_logo14.png" alt=""></li>
+                        <li data-aos="fade-left" class="chunjae"><img src="/img/c_logo15.png" alt=""></li>
+                        <li data-aos="fade-left" class="i815"><img src="/img/c_logo16.png" alt=""></li>
+                        <li data-aos="fade-left" class="byc"><img src="/img/c_logo17.png" alt=""></li>
+                        <li data-aos="fade-left" class="busanbank"><img src="/img/c_logo26.png" alt=""></li>
+                        <li data-aos="fade-left" class="donga-otsuka"><img src="/img/c_logo22.png" alt=""></li>
+                        <li data-aos="fade-left" class="nest"><img src="/img/c_logo20.png" alt=""></li>
                     </ul>
                 </div>
             </div>
