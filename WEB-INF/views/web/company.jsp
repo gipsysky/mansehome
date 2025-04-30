@@ -18,7 +18,7 @@
                         <li data-aos="fade-in"><span>AVERAGE CAREER (평균 경력)</span><b class="data">10</b>+</li>
                     </ul>
                     <div class="download" data-aos="fade-in">
-                        <a href="#">회사 소개서 다운로드하기</a>
+                        <a href="/web/file/download?filename=portfolio">회사 소개서 다운로드하기</a>
                         <a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a>
                     </div>
                 </div>

@@ -15,7 +15,7 @@
         <li><span>MAIL</span>  pm@manse.co.kr</li>
       </ul>
     </address>
-    <div class="request" onClick="javascript:document.location.href='/web/board/data/list?idTbl_cnf=60';">
+    <div class="request" onClick="javascript:document.location.href='/web/board/data/write?pageNum=1&idTbl_cnf=69';" style="cursor:pointer">
       <small>REQUEST</small>프로젝트 문의
     </div>
     <div id="quick-btns">

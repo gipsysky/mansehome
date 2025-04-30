@@ -34,7 +34,7 @@
                 <!--첨부파일-->
                 <c:if test="${dataVO['fld5'] ne '' and dataVO['fld5'] ne null and dataVO['fld5'] ne '|null'}">
                     <c:set var="fileArr" value="${fn:split(dataVO['fld5'], '|')}"/>
-                    <dd class="file"><a href="${fileArr[1]}">${fileArr[0]}</a></dd>
+                    <dd class="file"><a href="/web/file/download?filename=${fileArr[0]}&realfile=${fileArr[1]}">${fileArr[0]}</a></dd>
                 </c:if>
 
                 <!--본문-->

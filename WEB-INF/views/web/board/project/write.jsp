@@ -60,7 +60,7 @@ novalidate name="form" enctype="multipart/form-data" >
 					</dd>
 
 					<dt>프로젝트에 대해 이야기해주세요.</dt>
-					<dd><textarea name="fld3" id="" cols="30" rows="10" class="form-control"></textarea></dd>
+					<dd><textarea name="fld3" id="" cols="30" rows="20" class="form-control"></textarea></dd>
 					<dd>
 						<div class="row">
 							<div class="col-12 col-md">

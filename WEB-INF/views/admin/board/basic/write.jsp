@@ -110,7 +110,7 @@
 			  	</c:if>
 			  	
 				<c:if test="${listCnfFld.fld_type eq 'date' || listCnfFld.fld_type eq 'sdate' || listCnfFld.fld_type eq 'edate'}">
-					<input name="fld${listCnfFld.fld_code}" value="${dataVO[fldcode]}" type="text" class="form-control datepicker"  maxlength="${listCnfFld.fld_size}"  size="${listCnfFld.fld_size + 2 }" autocomplete="off">
+					<input name="fld${listCnfFld.fld_code}" value="${dataVO[fldcode]}" type="text" class="form-control --datepicker"  maxlength="${listCnfFld.fld_size}"  size="${listCnfFld.fld_size + 2 }" autocomplete="off" placeholder="YYYY-MM-DD 형태로만 입력 가능합니다">
 				</c:if>
 				
 				<c:if test="${listCnfFld.suffix ne '' and listCnfFld.suffix ne null}">

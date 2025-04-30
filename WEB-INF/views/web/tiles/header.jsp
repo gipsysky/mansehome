@@ -17,7 +17,7 @@
                         <li><a href="/web/company">회사소개</a></li>
                         <li><a href="/web/portfolios">포트폴리오</a></li>
                         <li><a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a></li>
-                        <li><a href="/web/board/data/list?idTbl_cnf=60">고객센터</a></li>
+                        <li><a href="/web/board/data/list?idTbl_cnf=61">고객센터</a></li>
                         <li class="toggle-gnb"><a href="#">MENU<span></span><span></span><span></span></a></li>
                     </ul>
                 </div><!-- /#gnb -->
@@ -36,10 +36,10 @@
                     <dl>
                         <dt>최근 프로젝트</dt>
                         <dd>
-                            <span class="thumb"><img src="img/recent.png" alt=""></span>
+                            <span class="thumb"><img src="/img/recent.png" alt=""></span>
                             <span class="title">2024 오로나민C 구매인증 이벤트</span>
                         </dd>
-                        <dd class="view"><a href="#"><u>바로가기</u></a></dd>
+                        <dd class="view"><a href="/web/portfolios"><u>바로가기</u></a></dd>
                     </dl>
                 </div>
                 <div class="right">
@@ -47,9 +47,9 @@
                         <li><a href="/web/company">회사소개</a></li>
                         <li><a href="/web/portfolios">포트폴리오</a></li>
                         <li><a href="/web/board/data/write?pageNum=1&idTbl_cnf=69">프로젝트 의뢰</a></li>
-                        <li><a href="/web/board/data/list?idTbl_cnf=60">고객센터</a></li>
+                        <li><a href="/web/board/data/list?idTbl_cnf=61">고객센터</a></li>
                     </ul>
-                    <span>회사 소개서 다운로드하기</span>
+                    <span><a href='/web/file/download?filename=portfolio'>회사 소개서 다운로드하기</a></span>
                 </div>
             </div>
         </div>

@@ -35,11 +35,11 @@
             <section class="main-slide">
                 <div class="bn">
                     © Mansecommunication Co.,Ltd.All rights reserved.
-                    <a href="/web/board/data/write?pageNum=1&idTbl_cnf=6"><img src="img/bn_request.png" alt="프로젝트문의"></a>
+                    <a href="/web/board/data/write?pageNum=1&idTbl_cnf=69"><img src="img/bn_request.png" alt="프로젝트문의"></a>
                 </div>
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="kintex" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="kintex" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>kintex</small>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="maniker" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="maniker" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>maniker</small>
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="oronamin" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="oronamin" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>donga-otsuka</small>
@@ -98,7 +98,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="donga" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=W')">
+                        <div class="swiper-slide" id="donga" onclick="$(location).attr('href', '/web/portfolios?fg=W')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>donga-otsuka</small>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="chaesundang" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=W')">
+                        <div class="swiper-slide" id="chaesundang" onclick="$(location).attr('href', '/web/portfolios?fg=W')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>chaesundang</small>
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="shooting" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="shooting" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>대한사격연맹</small>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="nest" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="nest" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>nest hotel</small>
@@ -169,7 +169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="malpyo" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=S')">
+                        <div class="swiper-slide" id="malpyo" onclick="$(location).attr('href', '/web/portfolios?fg=S')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>malpyo</small>
@@ -188,7 +188,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="school" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="school" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>School Mom Talk</small>
@@ -210,7 +210,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="safe" onclick="$(location).attr('href', '/portfolio/portfolio.asp?fg=A')">
+                        <div class="swiper-slide" id="safe" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>recarelab</small>

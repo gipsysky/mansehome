@@ -11,14 +11,15 @@
                     <p data-aos="fade-left" data-aos-delay="100">만세커뮤니케이션은 오랜 숙련된 능력과 끊임없는 노력으로 고객 만족에 최선을 다 하고 있습니다.<br>한발 앞선 창의력과 서비스로 최상의 디자인과 사용자 경험을 경험할 수 있습니다.</p>    
                     <div class="tab-nav" data-aos="fade-in" data-aos-delay="300">
                         <ul>
-                            <li class="active"><a href="#">ALL</a></li>
-                            <li><a href="#">WEB</a></li>
-                            <li><a href="#">SHOP</a></li>
+                            <li <c:if test="${fg eq 'A'}">class="active"</c:if>><a href="/web/portfolios?fg=A">ALL</a></li>
+                            <li <c:if test="${fg eq 'W'}">class="active"</c:if>><a href="/web/portfolios?fg=W">WEB</a></li>
+                            <li <c:if test="${fg eq 'S'}">class="active"</c:if>><a href="/web/portfolios?fg=S">SHOP</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="portfolio-list" data-aos="fade-in" data-aos-delay="400">
                     <ul>
+						
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio18').modal({fadeDuration: 200});"><img src="/img/pf18.jpg" alt=""></a></li>
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio5').modal({fadeDuration: 200});"><img src="/img/pf5.jpg" alt=""></a></li>
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio21').modal({fadeDuration: 200});"><img src="/img/pf21.jpg" alt=""></a></li>
@@ -38,6 +39,7 @@
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio11').modal({fadeDuration: 200});"><img src="/img/pf11.jpg" alt=""></a></li>
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio23').modal({fadeDuration: 200});"><img src="/img/pf23.jpg" alt=""></a></li>
                         <li data-aos="fade-down"><a href="javascript:;" onclick="$('#portfolio19').modal({fadeDuration: 200});"><img src="/img/pf19.jpg" alt=""></a></li>
+						
                     </ul>
                     <div class="btn-box">
                         <!-- 클릭할때마다 포폴이미지 4개씩 추가 -->
