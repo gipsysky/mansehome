@@ -108,8 +108,8 @@ novalidate name="form" enctype="multipart/form-data" >
 					</div>
 					<p style="padding-left: 1rem;padding-top: 5px;">※ 상담 신청하시면 1시간 이내로 신속히 상담해 드리겠습니다.</p>
 				</dl>
-				<div class="btn-box">
-					<button type="button" class="btn main line" onclick="javascript:ok();">상담 신청</button>
+				<div class="btn-box okBut">
+					<button type="button" class="btn main line " onclick="javascript:ok();">상담 신청</button>
 				</div>
 			</fieldset>
 
@@ -131,6 +131,7 @@ novalidate name="form" enctype="multipart/form-data" >
 
 <script> 
 function ok(){
+
 	<c:if test="${sessionScope.U_LOGIN ne 'Y' && auth_write eq 'true' && dataVO.idTbl_data eq null && sessionScope.U_LOGIN ne 'Y'}">
 	if (document.form.fld2.value == "")
 	{
@@ -166,6 +167,9 @@ function ok(){
 		alert("개인정보보호 정책에 동의해 주세요.");
 		return false; // 폼 제출 막기
 	}
+	
+	$(".okBut").html("<button type=button class='btn main line' onclick=javascript:alert('처리중입니다');>처리중</button>");
+
 	document.form.submit();
 	</c:if>
 }

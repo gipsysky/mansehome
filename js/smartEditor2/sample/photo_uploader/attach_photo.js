@@ -334,7 +334,7 @@
     	var tempFile,
     		sUploadURL;
     	
-    	sUploadURL= '/js/smartEditor2/sample/photo_uploader/file_uploader.jsp'; 	//upload URL
+    	sUploadURL= '/SEupload'; //'/js/smartEditor2/sample/photo_uploader/file_uploader.jsp'; 	//upload URL
     	
     	//파일을 하나씩 보내고, 결과를 받음.
     	for(var j=0, k=0; j < nImageInfoCnt; j++) {
@@ -349,8 +349,32 @@
     		tempFile = null;
     	}
 	}
-    
-    function callAjaxForHTML5 (tempFile, sUploadURL){
+	function callAjaxForHTML5(tempFile, sUploadURL){
+		var formData = new FormData();
+		formData.append("FileData", tempFile);  // 컨트롤러에서 files로 받음
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", sUploadURL, true);
+
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					var sResString = xhr.responseText;
+					if (sResString.indexOf("NOTALLOW_") > -1) {
+						var sFileName = sResString.replace("NOTALLOW_", "");
+						alert("이미지 파일(jpg,gif,png,bmp)만 업로드 하실 수 있습니다. (" + sFileName + ")");
+					} else {
+						makeArrayFromString(sResString);
+					}
+				} else {
+					alert("파일 업로드 중 오류가 발생했습니다.");
+				}
+			}
+		};
+
+		xhr.send(formData);
+	}
+    function O_callAjaxForHTML5 (tempFile, sUploadURL){
     	var oAjax = jindo.$Ajax(sUploadURL, {
 			type: 'xhr',
 			method : "post",

@@ -188,7 +188,7 @@
 $(function(){ 
 	$(".pagination a").click(function(event){
 		event.preventDefault();
-		document.listForm.reset();
+		document.listForm.idTbl_data.value = "";
 		document.listForm.pageNum.value = $(this).attr("href");
 		document.listForm.action = "list";
 		document.listForm.submit();
@@ -196,21 +196,20 @@ $(function(){
 
 	$(".write").click(function(event){
 		event.preventDefault();
-		document.listForm.reset();
+		document.listForm.idTbl_data.value = "";
 		document.listForm.action = "write";
 		document.listForm.submit();
 	}); 
 });
 
 function move(v, pass_fg){
-	document.listForm.reset();
+	document.listForm.idTbl_data.value = "";
 	document.listForm.idTbl_data.value = v;
 	document.listForm.action = "view";
 	document.listForm.submit();
 }
 function OLD_move(v, pass_fg){
-	if (pass_fg == 1){
-		document.listForm.reset();
+	if (pass_fg == 1){ 
 		document.listForm.method="post"; // 비밀번호가 있는 비밀글인 경우에는 query string 에 pw 값이 보이지않게 하기 위해 post
 		document.listForm.idTbl_data.value = v;
 		document.listForm.action = "view";
