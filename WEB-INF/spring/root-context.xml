@@ -30,9 +30,9 @@
         <constructor-arg ref="sqlSessionFactory" />
     </bean>
 
-	<!--  파일업로드 용량 (10MB)-->
+	<!--  파일업로드 용량 (100MB) // 여기는 전체 파일 총량을 넉넉하게 정해두는 것이고, Constants.java 에서 각 파일의 용량을 설정함으로써 컨트롤한다. -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-	  <property name="maxUploadSize" value="10485760"/>
+	  <property name="maxUploadSize" value="104857600"/>
 	  <property name="defaultEncoding" value="UTF-8" />
 	</bean> 
 	

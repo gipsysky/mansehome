@@ -55,17 +55,26 @@
 			<div>※ 사용되면 비회원 글쓰기는 제한됩니다.</div>
 		</div> 
 	</div>
-				
-	<div class="row mb-3">
-		<div class="col-sm-4">게시판 삭제금지</div>
-		<div class="col-sm-8">
-			<input type="radio" name="tbl_lock" value="N" id="tbl_lock1" ${cnfVO.tbl_lock eq 'N'? 'checked' :''}> <label for="tbl_lock1">삭제 가능</label>
-			<input type="radio" name="tbl_lock" value="Y" id="tbl_lock2" ${cnfVO.tbl_lock eq 'Y'? 'checked' :''}> <label for="tbl_lock2">삭제 금지</label>
-	    <div class="invalid-feedback">필수 정보입니다</div>
-		</div> 
-	</div>  
- 		
-	<div class="row mb-3">
+
+		<div class="row mb-3">
+			<div class="col-sm-4">캡챠 사용</div>
+			<div class="col-sm-8">
+				<input type="radio" name="captcha_use_fg" value="Y" id="captcha_use_fg2" ${cnfVO.captcha_use_fg eq 'Y'? 'checked' :''}> <label for="captcha_use_fg2">사용</label>
+				<input type="radio" name="captcha_use_fg" value="N" id="captcha_use_fg1" ${cnfVO.captcha_use_fg eq 'N'? 'checked' :''}> <label for="captcha_use_fg1">미사용</label>
+				<div class="invalid-feedback">필수 정보입니다</div>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-sm-4">게시판 삭제금지</div>
+			<div class="col-sm-8">
+				<input type="radio" name="tbl_lock" value="N" id="tbl_lock1" ${cnfVO.tbl_lock eq 'N'? 'checked' :''}> <label for="tbl_lock1">삭제 가능</label>
+				<input type="radio" name="tbl_lock" value="Y" id="tbl_lock2" ${cnfVO.tbl_lock eq 'Y'? 'checked' :''}> <label for="tbl_lock2">삭제 금지</label>
+				<div class="invalid-feedback">필수 정보입니다</div>
+			</div>
+		</div>
+
+		<div class="row mb-3">
 		<div class="col-sm-4">사용자 헤더(jsp)</div>
 		<div class="col-sm-8">
 		<input value="${cnfVO.header_url }" type="text" class="form-control" name="header_url">

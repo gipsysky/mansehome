@@ -9,7 +9,7 @@
 
 
 <form method="post" target="HiddenFrame" action="/web/board/data/writeOk" class="needs-validation"
-novalidate name="form" enctype="multipart/form-data" >
+novalidate name="form" id="form" enctype="multipart/form-data" >
 <input type=hidden name="idTbl_cnf" value="${cnfVO.idTbl_cnf}"> 
 <input type=hidden name="idTbl_data" value="${dataVO.idTbl_data}"> 
 <input type=hidden name="isReply" value="${isReply}">
@@ -167,10 +167,10 @@ function ok(){
 		alert("개인정보보호 정책에 동의해 주세요.");
 		return false; // 폼 제출 막기
 	}
-	
-	$(".okBut").html("<button type=button class='btn main line' onclick=javascript:alert('처리중입니다');>처리중</button>");
 
-	document.form.submit();
+	// ↓ 이거는 jQuery submit 이벤트를 타지 않음!
+	//document.form.submit();
+	$("#form").trigger("submit");
 	</c:if>
 }
 $(function(){
@@ -200,4 +200,33 @@ $(function(){
 		$(this).parent().parent().find("input.ckval").val(chkr);
 	});
 });
-</script>	
+</script>
+
+<!-- 파일 용량 체크 시작 -->
+<%@ page import="com.manse.common.Constants" %>
+<script>
+	$(function() {
+		const FILE_ALLOWED_MB = <%= Constants.FILE_ALLOWED_MB %>;
+		const maxSize = FILE_ALLOWED_MB * 1024 * 1024; // 바이트 단위
+
+		// 폼 제출 시 파일 크기 검사
+		$('form').on('submit', function(e) {
+			var isValid = true;
+			$('input[type="file"]').each(function(index) {
+				var file = this.files[0];
+				if (file && file.size > maxSize) {
+					alert('첨부하신 파일 중에서 10MB를 초과했습니다.');
+					e.preventDefault();
+					isValid = false;
+					return false; // each 루프 중단
+				}
+			});
+
+			if (isValid){
+				$(".okBut").html("<button type=button class='btn main line' onclick=javascript:alert('처리중입니다');>처리중</button>");
+			}
+			return isValid;
+		});
+	});
+</script>
+<!-- 파일 용량 체크 끝 -->

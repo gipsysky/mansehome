@@ -37,6 +37,16 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<servlet-class>com.manse.common.CaptchaServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<url-pattern>/captcha.jpg</url-pattern>
+	</servlet-mapping>
+
 	<filter>
 	    <filter-name>encodingFilter</filter-name>
 	    <filter-class>

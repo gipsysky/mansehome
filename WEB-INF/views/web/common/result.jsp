@@ -29,10 +29,17 @@ if(result == "noAuth"){
 
     alert("업로드한 파일이 허용된 파일확장자가 아닙니다.");
 
+} else if(result == "wrongCaptcha"){
+
+    alert("보안문자가 일치하지 않습니다.");
+
+	parent.$(".okBut").show();
+	parent.$(".noBut").hide();
+
 } else if(result == "tooLargeFile"){
 
     alert("<%=Constants.FILE_ALLOWED_MB%>MB 이하의 파일만 업로드 가능합니다.");
-
+	
 } else if(result == "writeOk"){
 	
 	alert("등록되었습니다");

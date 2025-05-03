@@ -36,7 +36,7 @@
 					<c:when test="${list.fld_type eq 'file' and dataVO[fldcode] ne '' }">
 						<c:set var="fileArr" value="${fn:split(dataVO[fldcode], '|')}"/>
 						<c:if test="${fileArr[0] ne 'null' }">
-							<a href="${fileArr[1]}">${fileArr[0]}</a>
+							<a href="/web/file/download?filename=${fileArr[0]}&realfile=${fileArr[1]}">${fileArr[0]}</a>
 						</c:if>
 					</c:when>
 					<c:otherwise>

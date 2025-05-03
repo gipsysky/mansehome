@@ -34,15 +34,15 @@
 				<!--첨부파일-->
 				<c:if test="${dataVO['fld5'] ne '' and dataVO['fld5'] ne null and dataVO['fld5'] ne '|null'}">
 					<c:set var="fileArr" value="${fn:split(dataVO['fld5'], '|')}"/>
-					<dd class="file"><a href="${fileArr[1]}">${fileArr[0]}</a></dd>
+					<dd class="file"><a href="/web/file/download?filename=${fileArr[0]}&realfile=${fileArr[1]}">${fileArr[0]}</a></dd>
 				</c:if>
 				<c:if test="${dataVO['fld6'] ne '' and dataVO['fld6'] ne null and dataVO['fld6'] ne '|null'}">
 					<c:set var="fileArr" value="${fn:split(dataVO['fld6'], '|')}"/>
-					<dd class="file"><a href="${fileArr[1]}">${fileArr[0]}</a></dd>
+					<dd class="file"><a href="/web/file/download?filename=${fileArr[0]}&realfile=${fileArr[1]}">${fileArr[0]}</a></dd>
 				</c:if>
 				<c:if test="${dataVO['fld7'] ne '' and dataVO['fld7'] ne null and dataVO['fld7'] ne '|null'}">
 					<c:set var="fileArr" value="${fn:split(dataVO['fld7'], '|')}"/>
-					<dd class="file"><a href="${fileArr[1]}">${fileArr[0]}</a></dd>
+					<dd class="file"><a href="/web/file/download?filename=${fileArr[0]}&realfile=${fileArr[1]}">${fileArr[0]}</a></dd>
 				</c:if>
 
 				<!--본문-->
