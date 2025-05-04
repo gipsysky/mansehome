@@ -21,7 +21,7 @@
 			</div> 
 		</div>
 		<div class="row mb-3">
-			<div class="col-sm-4">사이즈</div>
+			<div class="col-sm-4">길이 / 파일크기(MB)</div>
 			<div class="col-sm-8">
 			  <input name="fld_size" type="text" class="form-control"  value="${cnfFldVO.fld_size}">
 			</div> 

@@ -92,6 +92,41 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 						<input type="hidden" name="fld${listCnfFld.fld_code}" value="${dataVO[fldcode]}">
 							${dataVO[fldcode]}
 					</div>
+					<script>
+						$(function() {
+							//==========================================================================================
+							// 폼 제출 시 파일 크기 검사
+							//==========================================================================================
+
+							const FILE_ALLOWED_MB = ${listCnfFld.fld_size};
+							const maxSize = FILE_ALLOWED_MB * 1024 * 1024; // 바이트 단위
+
+							$('form').on('submit', function(e) {
+								var isValid = true;
+
+								var file = $('#file${listCnfFld.fld_code}')[0].files[0];
+								if (file){
+									if (file.size > maxSize) {
+										alert('첨부하신 파일 중에서 10MB를 초과했습니다.');
+										e.preventDefault();
+										isValid = false;
+									}
+								}
+								if (!isValid){
+									$(".okBut").show();
+									$(".noBut").hide();
+								}
+								return isValid;
+							});
+							//==========================================================================================
+
+							//파일찾기할 때마다 입력값 초기화
+							$('#file${listCnfFld.fld_code}').on('click', function () {
+								$(this).val('');
+								$(this).parent().find('.upload-name').val("");
+							});
+						});
+					</script>
 			  	</c:if>
 			  	
 			  	<c:if test="${listCnfFld.fld_type eq 'checkbox' }">
@@ -239,6 +274,11 @@ function ok(){
 			return;
 		}
 	</c:if>
+
+	//일단은 막아놓고, 이후 체크(파일크기, 보안문자 등)에서 걸리면 다시 submit할 수 있게 해제한다.
+	$(".okBut").hide();
+	$(".noBut").show();
+
 	// ↓ 이거는 jQuery submit 이벤트를 타지 않음!
 	//document.form.submit();
 	$("#form").trigger("submit");
@@ -299,35 +339,5 @@ function cancel(){
 	}
 }
 </script>
-
-<!-- 파일 용량 체크 시작 -->
-<%@ page import="com.manse.common.Constants" %>
-<script>
-	$(function() {
-		const FILE_ALLOWED_MB = <%= Constants.FILE_ALLOWED_MB %>;
-		const maxSize = FILE_ALLOWED_MB * 1024 * 1024; // 바이트 단위
-
-		// 폼 제출 시 파일 크기 검사
-		$('form').on('submit', function(e) {
-			var isValid = true;
-			$('input[type="file"]').each(function(index) {
-				var file = this.files[0];
-				if (file && file.size > maxSize) {
-					alert('첨부하신 파일 중에서 10MB를 초과했습니다.');
-					e.preventDefault();
-					isValid = false;
-					return false; // each 루프 중단
-				}
-			}); 
-
-			if (isValid){
-				$(".okBut").hide();
-				$(".noBut").show();
-			}
-			return isValid;
-		});
-	});
-</script>
-<!-- 파일 용량 체크 끝 -->
 
       

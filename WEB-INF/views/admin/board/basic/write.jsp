@@ -59,12 +59,38 @@
 			  	</c:if>  
 				
 				<c:if test="${listCnfFld.fld_type eq 'file'}">
-					<input name="upfile" type="file" class="form-control"  maxlength="${listCnfFld.fld_size}"  size="${listCnfFld.fld_size + 2 }">
+					<input name="upfile" type="file" class="form-control" id="fld${listCnfFld.fld_code}"  maxlength="${listCnfFld.fld_size}"  size="${listCnfFld.fld_size + 2 }">
 					<input type="hidden" name="fld${listCnfFld.fld_code}" value="${dataVO[fldcode]}">
 					<c:if test="${dataVO[fldcode] ne null && dataVO[fldcode] ne ''}">
 						 ${dataVO[fldcode]}
 						<a href="javascript:;" onClick="delAttach('${listCnfFld.fld_code}')">삭제</a>
 					</c:if>
+					
+					<script>
+						$(function() {
+							//==========================================================================================
+							// 폼 제출 시 파일 크기 검사
+							//==========================================================================================
+
+							const FILE_ALLOWED_MB = ${listCnfFld.fld_size};
+							const maxSize = FILE_ALLOWED_MB * 1024 * 1024; // 바이트 단위
+
+							$('form').on('submit', function(e) {
+								var isValid = true;
+
+								var file = $('#fld${listCnfFld.fld_code}')[0].files[0];
+								if (file){
+									if (file.size > maxSize) {
+										alert('첨부하신 파일 중에서 10MB를 초과했습니다.');
+										e.preventDefault();
+										isValid = false;
+									}
+								} 
+								return isValid;
+							});
+							//========================================================================================== 
+						});
+					</script>
 			  	</c:if>
 			  	
 			  	<c:if test="${listCnfFld.fld_type eq 'checkbox' }">
@@ -128,6 +154,21 @@
   </c:if>
 </c:forEach>
 
+<c:if test="${cnfVO.captcha_use_fg eq 'Y'}">
+	<div class="container">
+		<div class="row mb-3">
+			<div class="col-sm-4">
+				보안 문자 입력				
+			</div>
+			<div class="col-sm-8">
+				<!-- CAPTCHA 이미지 -->
+				<img src="${pageContext.request.contextPath}/web/etc/captcha.jpg" alt="CAPTCHA"><br>
+				<input type="text" name="captchaInput" class="form-control">
+			</div> 
+		</div> 
+	</div>  
+</c:if>
+
 <c:if test="${cnfVO.pw_use_fg eq 'Y' && cnfVO.idTbl_cnf eq null}">
 	<div class="container">
 		<div class="row mb-3">
@@ -189,7 +230,9 @@ function ok(){
 	<c:forEach begin="1" end="${textCnt}" varStatus="status">
 		oEditors.getById["ir${status.index}"].exec("UPDATE_CONTENTS_FIELD", []);
 	</c:forEach> 
-	document.form.submit();
+	// ↓ 이거는 jQuery submit 이벤트를 타지 않음!
+	//document.form.submit();
+	$("#form").trigger("submit");
 }
 
 $(function(){
