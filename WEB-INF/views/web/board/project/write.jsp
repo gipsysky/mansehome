@@ -194,6 +194,34 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 	</div>
 </div>
 
+<link rel="stylesheet" href="/css/jquery.modal.css">
+<script src="/js/jquery.modal.js"></script>
+
+<div id="popPrivacy" class="pop modal">
+	<div class="popHeader">
+		<h1><span>Privacy</span>개인정보처리방침</h1>
+	</div>
+	<div class="popContent">
+		<div class="privacy">
+			<dl>
+				<dt>1. 수집하는 개인정보의 항목</dt>
+				<dd>수집항목 : 회사명, 담당자 이름, 연락처, 이메일 등 온라인견적 상담에 필요한 항목을 수집합니다.</dd>
+				<dt>2. 개인정보의 수집 목적</dt>
+				<dd>(주)만세커뮤니케이션은 고객님께서 (주)만세커뮤니케이션의 온라인 상담에 필요한 최소한의 정보를 필수 사항으로 수집합니다. 회원님께서 제공하신 모든 정보는 상기 목적에 필요한 용도 이외로는 사용되지 않으며, 수집 정보의 범위나 사용 목적, 용도가 변경될 시에는 반드시 회원님께 사전 동의를 구할 것입니다.</dd>
+				<dt>3. 개인정보의 보유 및 이용 기간</dt>
+				<dd> 귀하의 개인정보는 온라인 견적 상담 후 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기하는 것을 원칙으로 합니다. 상법, 전자상거래 등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 (주)만세커뮤니케이션는 관계법령에서 정한 일정한 기간 동안 고객 정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존 기간은 아래와 같습니다.
+					<ul>
+						<li>- 계약 또는 청약철회 등에 관한 기록 : 5년</li>
+						<li>- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+	</div>
+	<!-- <p class="popClose"><a href="close-modal" rel="modal:close">창닫기</a></p> -->
+<a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
+
 <form method="get" name="goForm" action="view">
 <input type=hidden name="idTbl_cnf" value="${cnfVO.idTbl_cnf}">
 <input type=hidden name="idTbl_data" value="${dataVO.idTbl_data}">

@@ -19,7 +19,7 @@
       <small>REQUEST</small>프로젝트 문의
     </div>
     <div id="quick-btns">
-      <a href="#" title="맨위로" id="skip-btn"><img src="img/q_top.png" alt=""></a>
+      <a href="#" title="맨위로" id="skip-btn"><img src="/img/q_top.png" alt=""></a>
     </div>
   </div>
 </footer>

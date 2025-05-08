@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page import="com.manse.common.Constants" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,11 +34,7 @@ if(result == "noAuth"){
 
 	parent.$(".okBut").show();
 	parent.$(".noBut").hide();
-
-} else if(result == "tooLargeFile"){
-
-    alert("<%=Constants.FILE_ALLOWED_MB%>MB 이하의 파일만 업로드 가능합니다.");
-	
+ 
 } else if(result == "writeOk"){
 	
 	alert("등록되었습니다");

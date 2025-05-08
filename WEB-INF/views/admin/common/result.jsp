@@ -1,9 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%> 
-  
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<%
+    String clientIp = request.getHeader("X-Forwarded-For");
+    if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+        clientIp = request.getRemoteAddr();
+    }
+%>
 <script>
 var result = "${result}";
 
@@ -14,7 +19,7 @@ if(result == "NoAuth"){
 
 } else if(result == "NoAuthIp"){
 
-    alert("허용되지 않는 IP입니다");
+    alert("허용되지 않는 IP입니다\n귀하의 IP는 <%=clientIp%> 입니다");
     top.location.href="/admin/member/logout";
 
 } else if(result == "wrongCall"){

@@ -11,7 +11,7 @@
                     <p data-aos="fade-left" data-aos-delay="100">만세커뮤니케이션은 오랜 숙련된 능력과 끊임없는 노력으로 고객 만족에 최선을 다 하고 있습니다.<br>한발 앞선 창의력과 서비스로 최상의 디자인과 사용자 경험을 경험할 수 있습니다.</p>    
                     <div class="tab-nav" data-aos="fade-in" data-aos-delay="300">
                         <ul>
-                            <li <c:if test="${fg eq 'A'}">class="active"</c:if>><a href="/web/portfolios?fg=A">ALL</a></li>
+                            <li <c:if test="${fg eq 'A'}">class="active"</c:if>><a href="/web/portfolios?fg=A">APP</a></li>
                             <li <c:if test="${fg eq 'W'}">class="active"</c:if>><a href="/web/portfolios?fg=W">WEB</a></li>
                             <li <c:if test="${fg eq 'S'}">class="active"</c:if>><a href="/web/portfolios?fg=S">SHOP</a></li>
                         </ul>
@@ -50,18 +50,10 @@
             </div>
         </div>
         
-        <link rel="stylesheet" href="https://manse.co.kr/css/jquery.modal.css">
-        <script src="https://manse.co.kr/js/jquery.modal.js"></script>
-        <script>
-            function goToTop() {
-                $('body, html').animate({scrollTop:0}, '1000');
-            }
-        </script>
-        
         <!-- 네스트호텔 -->
         <div class="modal" id="portfolio1">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf1.png)">
+            <div class="back"><a href="javascript:;" class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf1.png)">
                 <div class="main-slide-txt">
                     <small>NEST HOTEL</small>
                     <strong>네스트호텔<br>공식 홈페이지 App</strong>
@@ -77,18 +69,18 @@
                     <div class="right"><img src="/img/pf_detail1_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 동아오츠카 -->
         <div class="modal" id="portfolio2">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf2.png)">
+            <div class="back"><a href="javascript:;" class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf2.png)">
                 <div class="main-slide-txt">
                     <small>donga-otsuka</small>
                     <strong>동아오츠카<br>공식 쇼핑몰 APP</strong>
@@ -104,18 +96,18 @@
                     <div class="right"><img src="/img/pf_detail2_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 라팔라코리아 -->
         <div class="modal" id="portfolio3">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf3.png)">
+            <div class="back"><a href="javascript:;" class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf3.png)">
                 <div class="main-slide-txt">
                     <small>RAPALA KOREA</small>
                     <strong>라팔라코리아 공식 쇼핑몰 APP</strong>
@@ -131,18 +123,18 @@
                     <div class="right"><img src="/img/pf_detail3_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 랜드로버 -->
         <div class="modal" id="portfolio4">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf4.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf4.png)">
                 <div class="main-slide-txt">
                     <small>LAND-ROVER KOREA</small>
                     <strong>랜드로버</strong>
@@ -158,18 +150,18 @@
                     <div class="right"><img src="/img/pf_detail4_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 마니커 -->
         <div class="modal" id="portfolio5">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf5.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf5.png)">
                 <div class="main-slide-txt">
                     <small>maniker</small>
                     <strong>마니커가 만드는 건강한 닭고기<br>마니커몰 Mobile APP</strong>
@@ -185,18 +177,18 @@
                     <div class="right"><img src="/img/pf_detail5_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 말표산업 -->
         <div class="modal" id="portfolio6">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf6.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf6.png)">
                 <div class="main-slide-txt">
                     <small>malpyo</small>
                     <strong>말표산업 주식회사</strong>
@@ -212,18 +204,18 @@
                     <div class="right"><img src="/img/pf_detail6_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 스웨트마켓 -->
         <div class="modal" id="portfolio7">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf7.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf7.png)">
                 <div class="main-slide-txt">
                     <small>donga-otsuka</small>
                     <strong>동아오츠카<br>스웨트마켓 공식 APP</strong>
@@ -239,18 +231,18 @@
                     <div class="right"><img src="/img/pf_detail7_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 스쿨맘톡 -->
         <div class="modal" id="portfolio8">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf8.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf8.png)">
                 <div class="main-slide-txt">
                     <small>School Mom Talk</small>
                     <strong>스쿨맘톡 등. 하교 위치정보<br>알림 서비스 APP</strong>
@@ -266,18 +258,18 @@
                     <div class="right"><img src="/img/pf_detail8_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 스튜디오 드래곤 -->
         <div class="modal" id="portfolio9">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf9.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf9.png)">
                 <div class="main-slide-txt">
                     <small>studio dragon</small>
                     <strong>스튜디오 드래곤</strong>
@@ -293,17 +285,17 @@
                     <div class="right"><img src="/img/pf_detail9_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         <!-- 엔픽플 -->
         <div class="modal" id="portfolio10">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf10.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf10.png)">
                 <div class="main-slide-txt">
                     <small>NPICK</small>
                     <strong>엔픽플<br>공식 App</strong>
@@ -319,18 +311,18 @@
                     <div class="right"><img src="/img/pf_detail10_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 잇잡 -->
         <div class="modal" id="portfolio11">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf11.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf11.png)">
                 <div class="main-slide-txt">
                     <small>ITJOB</small>
                     <strong>잇잡<br>IT 채용 전문 플랫폼 </strong>
@@ -346,18 +338,18 @@
                     <div class="right"><img src="/img/pf_detail11_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 재키 -->
         <div class="modal" id="portfolio12">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf12.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf12.png)">
                 <div class="main-slide-txt">
                     <small>JACKIE CYCLE</small>
                     <strong>재키 사이클 공식 APP</strong>
@@ -373,18 +365,18 @@
                     <div class="right"><img src="/img/pf_detail12_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 채선당 -->
         <div class="modal" id="portfolio14">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf14.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf14.png)">
                 <div class="main-slide-txt">
                     <small>chaesundang</small>
                     <strong>채선당</strong>
@@ -400,18 +392,18 @@
                     <div class="right"><img src="/img/pf_detail14_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- AGCIA -->
         <div class="modal" id="portfolio15">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf15.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf15.png)">
                 <div class="main-slide-txt">
                     <small>AGCIA</small>
                     <strong>AGCIA<br>아시아보증·신용보험협회</strong>
@@ -427,18 +419,18 @@
                     <div class="right"><img src="/img/pf_detail15_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 대한사격연맹 -->
         <div class="modal" id="portfolio17">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf17.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf17.png)">
                 <div class="main-slide-txt">
                     <small>대한사격연맹</small>
                     <strong>대한사격연맹 공식 홈페이지 APP</strong>
@@ -454,17 +446,17 @@
                     <div class="right"><img src="/img/pf_detail17_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         <!-- KINTEX -->
         <div class="modal" id="portfolio18">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf18.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf18.png)">
                 <div class="main-slide-txt">
                     <small>KINTEX</small>
                     <strong>대한민국 최대 컨벤션 센터<br>킨텍스 공식 홈페이지 APP</strong>
@@ -480,17 +472,17 @@
                     <div class="right"><img src="/img/pf_detail18_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         <!-- 모아베베 -->
         <div class="modal" id="portfolio19">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf19.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf19.png)">
                 <div class="main-slide-txt">
                     <small>MOABEBE</small>
                     <strong>출산육아의 모든것<br>모아베베 APP</strong>
@@ -506,7 +498,7 @@
                     <div class="right"><img src="/img/pf_detail19_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
@@ -516,7 +508,7 @@
         
         <!-- 오로나민C -->
         <div class="modal" id="portfolio21">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
             <style>
                 @media (min-width: 992px) {
                     #portfolio21 .detail-images .grid {
@@ -534,7 +526,7 @@
                     }
                 }
             </style>
-            <div class="top-visual" style="background-image: url(img/bg_pf21.png)">
+            <div class="top-visual" style="background-image: url(/img/bg_pf21.png)">
                 <div class="main-slide-txt">
                     <small>donga-otsuka</small>
                     <strong>오로나민C 구매 인증 이벤트</strong>
@@ -555,18 +547,18 @@
                     <div class="right"><img src="/img/pf_detail21_3.png" alt=""></div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
-            </div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a>
+            </div><a href="javascript:;" onclick="$.modal.close();" class="close-modal ">Close</a>
         </div>
         
         <!-- 파주 출판도시 -->
         <div class="modal" id="portfolio23">
-            <div class="back"><a href="javascript:;" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a></div>
-            <div class="top-visual" style="background-image: url(img/bg_pf23.png)">
+            <div class="back"><a href="javascript:;"  class="close-btn" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a></div>
+            <div class="top-visual" style="background-image: url(/img/bg_pf23.png)">
                 <div class="main-slide-txt">
                     <small>pajubookcity</small>
                     <strong>파주 출판도시</strong>
@@ -588,10 +580,24 @@
                     </div>
                 </div>
                 <div class="btn-box">
-                    <a href="#" class="btn main line" rel="modal:close"><i class="bi bi-arrow-left"></i>닫기</a>
+                    <a href="javascript:;" class="btn main line" onclick="$.modal.close();"><i class="bi bi-arrow-left"></i>닫기</a>
                 </div>
                 <div class="top-btns">
                     <a href="javascript:;" title="맨위로" onclick="$('#portfolio').animate({ scrollTop: 0 }, 600);"><img src="/img/q_top.png" alt=""></a>
                 </div>
             </div>
         </div>
+		
+		
+        
+        <link rel="stylesheet" href="/css/jquery.modal.css">
+        <script src="/js/jquery.modal.js"></script>
+        <script>
+            function goToTop() {
+                $('body, html').animate({scrollTop:0}, '1000');
+            }
+			document.querySelector('.close-btn').addEventListener('click', function () {
+			  $.modal.close();
+			});
+			
+        </script>

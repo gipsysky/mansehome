@@ -36,10 +36,23 @@
                     <dl>
                         <dt>최근 프로젝트</dt>
                         <dd>
-                            <span class="thumb"><img src="/img/recent.png" alt=""></span>
-                            <span class="title">2024 오로나민C 구매인증 이벤트</span>
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><span class="thumb"><img src="/img/000501_1.png" class="d-none d-sm-block"><img src="/img/000501_2.png" class="d-sm-none"></span><span class="title">KINTEX 전시장 공식APP</span><a href="/web/portfolios" target="_blank"><u>바로가기</u></a></div>
+									<div class="swiper-slide"><span class="thumb"><img src="/img/000502_1.png" class="d-none d-sm-block"><img src="/img/000502_2.png" class="d-sm-none"></span><span class="title">동아오츠카 공식 사이트 반응형 웹</span><a href="/web/portfolios" target="_blank"><u>바로가기</u></a></div>
+									<div class="swiper-slide"><span class="thumb"><img src="/img/000503_1.png" class="d-none d-sm-block"><img src="/img/000503_2.png" class="d-sm-none"></span><span class="title">2024 오로나민C 구매인증 이벤트</span><a href="/web/portfolios" target="_blank"><u>바로가기</u></a></div>
+								</div>
+							</div>
                         </dd>
-                        <dd class="view"><a href="/web/portfolios"><u>바로가기</u></a></dd>
+						<dd class="view">
+							<div class="swiper-controls">
+								<div class="swiper-pagination"></div>
+								<div class="play-stop">
+									<span class="play"><i class="bi bi-play"></i></span>
+									<span class="pause"><i class="bi bi-pause"></i></span>
+								</div>
+							</div>
+						</dd>
                     </dl>
                 </div>
                 <div class="right">

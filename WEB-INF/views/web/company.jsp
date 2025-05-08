@@ -67,7 +67,7 @@
                                         <ol>
                                             <li><span>11</span>마니커몰(manikermall.com) 리뉴얼</li>
                                             <li><span>10</span>오로나민C 구매 인증(oronamin-c-event.com) 프로모션 진행 완료</li>
-                                            <li><span>07</span>[일본갈까] 일본 여행 숙박 앱 수주 체결</li>
+                                            <li><span>07</span>[일본가자] 일본 여행 숙박 앱 수주 체결</li>
                                             <li><span>05</span>[SGI서울보증] 영문 홈페이지 리뉴얼</li>
                                         </ol>
                                     </div>
@@ -94,7 +94,7 @@
                                     <div class="info">
                                         <div class="year">2021</div>
                                         <ol>
-                                            <li><span>11</span>[킨텍스] 2021 서울모토쇼 빅데이터 방문 통계 구축</li>
+                                            <li><span>11</span>[킨텍스] 2021 서울모터쇼 빅데이터 방문 통계 구축</li>
                                             <li><span>05</span>[동아오츠카] 포카리스웨트 홈페이지 리뉴얼</li>
                                             <li><span>03</span>[한샘] 키친&인테리어 유지 보수 계약 체결</li>
                                             <li><span>02</span>[한국도자재단] 도자 비즈니스 플랫폼 계약 체결</li>

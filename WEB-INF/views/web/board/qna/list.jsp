@@ -18,7 +18,7 @@
         <div class="board-list" data-aos="fade-down" data-aos-delay="400">
             <div class="board-header">
                 <ul>
-                    <li>번호</li>
+                    <li> </li>
                     <c:forEach items="${fldList }" var="fldList">
                         <li>${fldList.fld_name }</li>
                     </c:forEach>
@@ -28,8 +28,9 @@
               <c:forEach items="${dataList }" var="list" varStatus="status">
                   <li onClick="move('${list.idTbl_data}','${list.pw ne null && list.pw ne '' ? 1 : 0}')">
 
-                      <!--번호-->
+                      <!--번호
                       <a href=""><c:out value="${ (pageMaker.total - status.index) - (pageMaker.cri.pageNum - 1) * pageMaker.cri.amount }"/></a>
+					  -->
 
                   <c:set var="v" value=""/>
                   <c:forEach items="${fldList }" var="fldList">
@@ -52,6 +53,12 @@
                           </strong>
                           </a>
                         </c:when>
+                        <c:when test="${fldcode eq 'fld1' }">
+                          <!-- fld2는 고정필드 : 글쓴이 -->
+                          <span class="writer"> 
+                          <img src="/images/common/lock.gif"> ${list[fldcode]} 
+                          </span> 
+                        </c:when>
                         <c:when test="${fldList.fld_type eq 'date' || fldList.fld_type eq 'sdate' || fldList.fld_type eq 'edate' }">
                           <!--작성일-->
                           <span class="date">
@@ -59,7 +66,7 @@
                           <fmt:formatDate value="${parseDelv_date}" pattern="yyyy.MM.dd"/>
                           </span>
                         </c:when>
-                        <c:otherwise>
+                        <c:otherwise> 
                               ${fldList.prefix }
                               ${list[fldcode] }
                               ${fldList.suffix }

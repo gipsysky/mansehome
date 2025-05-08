@@ -58,13 +58,11 @@
 </script>
 
 
-
-
 <script>
     // 서버에서 가져온 데이터 준비
     const labels = [
         <c:forEach items="${pageAccessList}" var="item" varStatus="status">
-        "<c:out value='${item.page_url}'/>"<c:if test="${!status.last}">,</c:if>
+        "<c:out value='${item.url_desc}'/>"<c:if test="${!status.last}">,</c:if>
         </c:forEach>
     ];
     const data = [
@@ -72,10 +70,15 @@
         <c:out value="${item.count}"/><c:if test="${!status.last}">,</c:if>
         </c:forEach>
     ];
+    const pageUrls = [
+        <c:forEach items="${pageAccessList}" var="item" varStatus="status">
+        "<c:out value='${item.page_url}' escapeXml='false'/>"<c:if test="${!status.last}">,</c:if>
+        </c:forEach>
+    ];
 
     // 차트 그리기
     const ctx = document.getElementById('accessPageChart').getContext('2d');
-    new Chart(ctx, {
+    const accessChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
@@ -89,6 +92,15 @@
         },
         options: {
             indexAxis: 'y', // y축에 페이지 url
+            onClick: (event, elements) => {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const url = pageUrls[index];
+                    if (url) {
+                        window.open(url, '_blank'); // 새 창으로 열기
+                    }
+                }
+            },
             scales: {
                 x: {
                     beginAtZero: true,
@@ -101,6 +113,15 @@
                     title: {
                         display: true,
                         text: '페이지 URL'
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return '방문 수: ' + context.formattedValue;
+                        }
                     }
                 }
             }

@@ -190,8 +190,16 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 		</th>
 		<td>
 			<!-- CAPTCHA 이미지 -->
-			<img src="${pageContext.request.contextPath}/web/etc/captcha.jpg" alt="CAPTCHA"><br>
+			<!-- <img src="${pageContext.request.contextPath}/web/etc/captcha.jpg" alt="CAPTCHA"><br> -->
+			<div><iframe name="cfr" src="${pageContext.request.contextPath}/web/etc/captcha.jpg" width=160 height=50 frameborder=0></iframe></div>
+			<div>5글자를 입력하세요 (<a href="javascript:;" onClick="refreshCaptcha()" style="text-decoration:underline">보안문자 새로고침</a>)</div>
 			<input type="text" name="captchaInput" class="form-control">
+			
+			<script>
+			function refreshCaptcha(){
+				window.open("${pageContext.request.contextPath}/web/etc/captcha.jpg","cfr");
+			}
+			</script>
 		</td>
 	</tr>
 </c:if>

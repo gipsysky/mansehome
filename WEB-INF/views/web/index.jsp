@@ -4,33 +4,6 @@
 <%@ page session="false" %>
 
 
-
-        <script>
-            let navSwiper = new Swiper("#nav .swiper", {
-                speed: 1400,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },	
-                pagination: {
-                    el: "#nav .swiper-pagination",
-                    clickable: true
-                },
-            });
-            $("#nav .play-stop .pause").click(function(){
-                navSwiper.autoplay.stop();
-                $("#nav .play-stop .pause").hide();
-                $("#nav .play-stop .play").show();
-            });
-
-            $("#nav .play-stop .play").click(function(){
-                navSwiper.autoplay.start();
-                $("#nav .play-stop .play").hide();
-                $("#nav .play-stop .pause").show();
-            });
-        </script>
-
         <div id="content" class="index">
             <section class="main-slide">
                 <div class="bn">

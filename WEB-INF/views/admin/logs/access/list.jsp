@@ -25,7 +25,7 @@
                 <td><c:out value="${(pageMaker.total - status.index) - (pageMaker.cri.pageNum - 1) * 10}"/></td>
                 <td><c:out value="${log.access_Date}"/></td>
                 <td><c:out value="${log.access_Time}"/></td>
-                <td><c:out value="${log.page_Url}"/></td>
+                <td><c:out value="${log.url_desc}"/></td>
                 <td><c:out value="${log.ip_Address}"/></td>
                 <td><c:out value="${log.user_Agent}"/></td>
             </tr>
