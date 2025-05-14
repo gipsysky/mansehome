@@ -4,6 +4,5 @@ files
 META-INF 
 portfolio
 WEB-INF/classes
-WEB-INF/lib
-WEB-INF/spring 
+WEB-INF/lib 
 .gitignore

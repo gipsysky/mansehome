@@ -30,6 +30,7 @@
                     </h3>
                     <div class="swiper swiper-top">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">2025</div>
                             <div class="swiper-slide">2024</div>
                             <div class="swiper-slide">2023</div>
                             <div class="swiper-slide">2022</div>
@@ -46,6 +47,19 @@
                     </div>
                     <div class="swiper swiper-bottom">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="inner">
+                                    <div class="img"><img src="/img/h25.jpg" alt=""></div>
+                                    <div class="info">
+                                        <div class="year">2025</div>
+                                        <ol>
+                                            <li><span>04</span>[일본가자] 일본골프여행 APP 오픈</li>
+                                            <li><span>03</span>[오로나민C] 2025년 오로나민C 구매인증 프로모션 진행</li>
+                                            <li><span>01</span>[아모레퍼시픽] 중소형사이트 운영 유지보수 계약</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="inner">
                                     <div class="img"><img src="/img/h24.png" alt=""></div>

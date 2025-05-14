@@ -170,14 +170,14 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 						<div class="row">
 							<div class="col-12 col-md-6"><input type="text" name="fld2" placeholder="회사명" class="form-control"></div>
 							<div class="col-12 col-md-6"><input type="text" name="fld1" placeholder="담당자 이름" class="form-control"></div>
-							<div class="col-12 col-md-6"><input type="text" name="fld5" placeholder="연락처" class="form-control"></div>
-							<div class="col-12 col-md-6"><input type="text" name="fld6" placeholder="이메일" class="form-control"></div>
+							<div class="col-12 col-md-6"><input type="text" name="fld5" placeholder="연락처" class="form-control" inputmode="numeric" pattern="[0-9]*"></div>
+							<div class="col-12 col-md-6"><input type="email" name="fld6" placeholder="이메일" class="form-control"></div>
 						</div>
 					</dd>
 					<div class="checkbox">
-						<input type="checkbox" class="comm_check" id="protect1" name="agree" value="Y"><label class="comm_check_label" for="protect1"><a href="#popPrivacy" rel="modal:open"><u>개인정보보호 정책</u></a>에 동의 합니다.</label>
+						<input type="checkbox" class="comm_check" id="protect1" name="agree" value="Y"><label class="comm_check_label" for="protect1"><a href="#popPrivacy" rel="modal:open"><u>개인정보처리방침</u></a>에 동의 합니다.</label>
 					</div>
-					<p style="padding-left: 1rem;padding-top: 5px;">※ 상담 신청하시면 1시간 이내로 신속히 상담해 드리겠습니다.</p>
+					<p style="padding-left: 1rem;padding-top: 5px;">※ 상담 신청하시면 신속히 상담해 드리겠습니다.</p>
 				</dl>
 				<div class="btn-box okBut">
 					<button type="button" class="btn main line " onclick="javascript:ok();">상담 신청</button>
@@ -194,8 +194,10 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 	</div>
 </div>
 
+
 <link rel="stylesheet" href="/css/jquery.modal.css">
 <script src="/js/jquery.modal.js"></script>
+<style>#popPrivacy .close-modal:not(.close-btn) {display: none;}</style>
 
 <div id="popPrivacy" class="pop modal">
 	<div class="popHeader">
@@ -220,7 +222,17 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 
 	</div>
 	<!-- <p class="popClose"><a href="close-modal" rel="modal:close">창닫기</a></p> -->
-<a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
+<a href="javascript:;" class="close-btn close-modal" onclick="$.modal.close();">Close</a>
+</div>
+
+
+<script>
+	document.querySelector('.close-modal').addEventListener('click', function () {
+	  $.modal.close();
+	});
+	
+</script>
+
 
 <form method="get" name="goForm" action="view">
 <input type=hidden name="idTbl_cnf" value="${cnfVO.idTbl_cnf}">

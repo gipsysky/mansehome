@@ -27,7 +27,7 @@
 				<tr onClick="move('${list.idTbl_data}','${list.pw ne null ? 1 : 0}')"> 
 					<td>
 						<c:out value="${ (pageMaker.total - status.index) - (pageMaker.cri.pageNum - 1) * pageMaker.cri.amount }"/>
-						${list.pw ne null ? '비밀글' : ''}
+						${list.pw ne null && list.pw ne '' ? '비밀글' : ''}
 					</td>
 					
 					<c:forEach items="${fldList }" var="fldList">

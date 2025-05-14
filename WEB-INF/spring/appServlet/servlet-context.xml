@@ -21,6 +21,7 @@
     <resources mapping="/fonts/**" location="/fonts/" />
 	<resources mapping="/BotDetect/**" location="/BotDetect/" />
 	<resources mapping="/files/**" location="/files/" />
+	<resources mapping="/static/**" location="/static/" />
 <!--개발-->
 <!--    <resources mapping="/uploadFile/**" location="file:///E:/intelliJ-workspace2/uploadFile/" />-->
 <!--실서버-->

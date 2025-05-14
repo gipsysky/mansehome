@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+	<link rel="shortcut icon" href="<c:url value='/resources/favicon.ico'/>" type="iamge/x-icon"/>
+	<link rel="icon" href="<c:url value='/resources/favicon.ico'/>" type="iamge/x-icon"/>
     <link rel="stylesheet" href="/css/jquery-ui.min.css">
     <link rel="stylesheet" href="/css/aos.css">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">

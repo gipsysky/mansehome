@@ -111,6 +111,12 @@ if(result == "noAuth"){
 	<c:if test="${returnFunction ne null}">
 		parent.${returnFunction};
 	</c:if>
+
+}else if (result=="noBoardCnf"){
+
+	alert("잘못된 호출입니다");
+	history.go(-1);
+
 	 
 }else if (result=="-1"){
 

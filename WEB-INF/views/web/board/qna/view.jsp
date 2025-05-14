@@ -46,13 +46,15 @@
 				</c:if>
 
 				<!--본문-->
-				<dd>${fn:replace(dataVO['fld3'], BR, "<br>")}</dd>
-
+				<dd>${fn:replace(dataVO['fld3'], BR, "<br>")}
+				
 
 				<!--첨부이미지-->
 				<c:if test="${dataVO['fld4'] ne ''}">
 					<BR><img src="${dataVO["fld4"] }" class="img-fluid">
 				</c:if>
+				</dd>
+
 			</dl>
 <%--			<div class="prev-next">--%>
 <%--				<c:if test="${nextDetail ne null}">--%>

@@ -183,7 +183,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="safe" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
+                        <!-- <div class="swiper-slide" id="safe" onclick="$(location).attr('href', '/web/portfolios?fg=A')">
                             <div class="slide-txt-wrap">
                                 <div class="main-slide-txt" data-swiper-parallax="-500">
                                     <small>recarelab</small>
@@ -204,7 +204,7 @@
                                     <div class="circle circle03"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="swiper-controls">
                         <div class="swiper-pagination"></div>
