@@ -97,7 +97,7 @@
                                             <li><span>11</span>[날개물류] ERP 리뉴얼 및 C2C 오픈마켓 구축 계약 체결</li>
                                             <li><span>09</span>[성남 시청] 2023~2024년 경기도 종합체육대회 유치 성남시 착수 FT 팀 구성</li>
                                             <li><span>03</span>[동아오츠카]스웨트마켓 APP 제작/유지 보수 체결</li>
-                                            <li><span>01</span>[서울보증보험] AGCIG 홈페이지 제작/유지 보수 체결</li>
+                                            <li><span>01</span>[서울보증보험] AGCIA 홈페이지 제작/유지 보수 체결</li>
                                         </ol>
                                     </div>
                                 </div>

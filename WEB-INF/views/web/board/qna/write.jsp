@@ -48,6 +48,33 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 </c:if>
 <!-- /비회원 작성시 작성자명-->
 
+<!-- 비밀번호-->
+<c:if test="${sessionScope.U_LOGIN ne 'Y' && auth_write eq 'true'}">
+	<c:choose>
+		<c:when test="${dataVO.idTbl_data eq null}">
+			<tr>
+				<th>
+					비밀번호 <font color="red">*</font>
+				</th>
+				<td>
+					<div class="row">
+						<div class="col col-md-auto">
+							<input type="password" class="form-control" name="pw" maxlength="12" value="${dataVO.pw }">
+						</div>
+						<div class="col-auto align-self-center">
+							<span class="checkbox"><input type="checkbox" name="chk" id="chk" checked="" disabled=""><label for="chk">비밀글 설정</label></span>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</c:when>
+		<c:otherwise>
+			<input name="pw" type="hidden" class="form-control" maxlength=20 size=40 value="${dataVO.pw }"/>
+		</c:otherwise>
+	</c:choose>
+</c:if>
+<!-- /비밀번호-->
+
 <c:forEach items="${list }" var="listCnfFld" varStatus="status">
 
   <c:if test="${listCnfFld.fld_code ne '1' }">
@@ -203,33 +230,6 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 		</td>
 	</tr>
 </c:if>
-
-<!-- 비밀번호-->
-<c:if test="${sessionScope.U_LOGIN ne 'Y' && auth_write eq 'true'}">
-	<c:choose>
-		<c:when test="${dataVO.idTbl_data eq null}">
-			<tr>
-				<th>
-					비밀번호 <font color="red">*</font>
-				</th>
-				<td>
-					<div class="row">
-						<div class="col col-md-auto">
-							<input type="password" class="form-control" name="pw" maxlength="12" value="${dataVO.pw }">
-						</div>
-						<div class="col-auto align-self-center">
-							<span class="checkbox"><input type="checkbox" name="chk" id="chk" checked="" disabled=""><label for="chk">비밀글 설정</label></span>
-						</div>
-					</div>
-				</td>
-			</tr>
-		</c:when>
-		<c:otherwise>
-			<input name="pw" type="hidden" class="form-control" maxlength=20 size=40 value="${dataVO.pw }"/>
-		</c:otherwise>
-	</c:choose>
-</c:if>
-<!-- /비밀번호-->
 
 	
 	<input type="hidden" name="upfile"><!-- 없으면 에러남 -->

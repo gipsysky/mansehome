@@ -247,35 +247,26 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 function ok(){
 
 	<c:if test="${sessionScope.U_LOGIN ne 'Y' && auth_write eq 'true' && dataVO.idTbl_data eq null && sessionScope.U_LOGIN ne 'Y'}">
-	if (document.form.fld2.value == "")
-	{
-		alert("회사명을 입력해주십시오");
-		document.form.fld2.focus();
-		return;
-	}
+ 
 	if (document.form.fld1.value == "")
 	{
 		alert("담당자 이름을 입력해주십시오");
 		document.form.fld1.focus();
 		return;
 	}
-	if (document.form.fld5.value == "")
+	if (document.form.fld5.value == "" && document.form.fld6.value == "")
 	{
-		alert("연락처를 입력해주십시오");
+		alert("연락처 또는 이메일을 입력해주십시오");
 		document.form.fld5.focus();
 		return;
-	}
-	if (document.form.fld6.value == "")
-	{
-		alert("이메일을 입력해주십시오");
-		document.form.fld6.focus();
-		return;
-	}
+	} 
+	/*
 	if (document.form.fld3.value.length < 20) {
 		alert("내용을 20자 이상 입력해주십시오");
 		document.form.fld3.focus();
 		return;
 	}
+	*/
 	const agreeCheckbox = document.querySelector('input[name="agree"]');
 	if (!agreeCheckbox.checked) {
 		alert("개인정보보호 정책에 동의해 주세요.");

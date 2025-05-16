@@ -18,6 +18,6 @@
 </head>
 
 <script>
-alert("오류가 발생하였습니다"); 
+alert("존재하지 않는 페이지입니다"); 
 history.go(-1);
 </script>
