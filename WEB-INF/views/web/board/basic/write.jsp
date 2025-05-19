@@ -148,18 +148,20 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 </c:forEach>
 
 
-	<c:if test="${cnfVO.captcha_use_fg eq 'Y'}">
-		<tr>
-			<th>
-				보안 문자 입력
-			</th>
-			<td>
-				<!-- CAPTCHA 이미지 -->
-				<img src="${pageContext.request.contextPath}/web/etc/captcha.jpg" alt="CAPTCHA"><br>
-				<input type="text" name="captchaInput" class="form-control">
-			</td>
-		</tr>
-	</c:if>
+<!-- 보안 문자 -->
+<c:if test="${cnfVO.captcha_use_fg eq 'Y'}">
+	<tr>
+		<th>
+			보안 문자 입력
+		</th>
+		<td>
+			<!-- CAPTCHA 이미지 -->
+			<img src="${pageContext.request.contextPath}/web/etc/captcha.jpg" alt="CAPTCHA"><br>
+			<input type="text" name="captchaInput" class="form-control">
+		</td>
+	</tr>
+</c:if>
+<!-- /보안 문자 -->
 	
 <!-- 비밀번호-->
 <c:if test="${sessionScope.U_LOGIN ne 'Y' && auth_write eq 'true'}">

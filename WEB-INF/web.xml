@@ -2,7 +2,7 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	
+
 	<!-- URL 뒤에 jsessionid 가 붙는 것을 막는 설정 -->
 	<session-config>
 		<session-timeout>600</session-timeout>
@@ -15,37 +15,11 @@
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
 	</context-param>
 	
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<!-- Creates the Spring Container shared by all Servlets and Filters-->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 		<listener-class>com.manse.operation.LocationSchedule</listener-class>
 	</listener>
-
-	<!-- Processes application requests -->
-	<servlet>
-		<servlet-name>appServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-		
-	<servlet-mapping>
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>CaptchaServlet</servlet-name>
-		<servlet-class>com.manse.common.CaptchaServlet</servlet-class>
-	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>CaptchaServlet</servlet-name>
-		<url-pattern>/captcha.jpg</url-pattern>
-	</servlet-mapping>
 
 	<filter>
 	    <filter-name>encodingFilter</filter-name>
@@ -63,9 +37,10 @@
 	<filter-mapping>
 	    <filter-name>encodingFilter</filter-name>
 	    <url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> 
 
 	<!-- NAVER lucy xss Filter -->
+	<!-- xssEscapeServletFilter는 CharacterEncodingFilter 뒤에 위치해야 한다. -->
 	<!-- xss 필터링 -->
 	<filter>
 		<filter-name>xssEscapeServletFilter</filter-name>
@@ -75,33 +50,62 @@
 		<filter-name>xssEscapeServletFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<!-- multipart/form-data도 xss필터를 거치기 위해 -->
-	<!--	<filter>-->
-	<!--		<filter-name>multipartFilter</filter-name>-->
-	<!--		<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>-->
-	<!--	</filter>-->
-	<!--	<filter-mapping>-->
-	<!--		<filter-name>multipartFilter</filter-name>-->
-	<!--		<url-pattern>/*</url-pattern>-->
-	<!--	</filter-mapping>-->
+	<!-- multipart/form-data도 xss필터를 거치기 위해-->
+		<filter>
+			<filter-name>multipartFilter</filter-name>
+			<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
+		</filter>
+		<filter-mapping>
+			<filter-name>multipartFilter</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping>
+		 
 	<!-- /NAVER lucy xss Filter -->
+
+
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<servlet-class>com.manse.common.CaptchaServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CaptchaServlet</servlet-name>
+		<url-pattern>/captcha.jpg</url-pattern>
+	</servlet-mapping>
+
 
 
 	<mime-mapping>
 		<extension>ico</extension>
 		<mime-type>image/x-icon</mime-type>
 	</mime-mapping>
-	
+
 	<error-page>
 		<error-code>400</error-code>
 		<location>/static/error.jsp</location>
 	</error-page>
-	
+
 	<error-page>
 		<error-code>404</error-code>
 		<location>/static/404.jsp</location>
 	</error-page>
-	
+
 	<error-page>
 		<error-code>500</error-code>
 		<location>/static/error.jsp</location>
@@ -111,5 +115,6 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/static/error.jsp</location>
 	</error-page>
+
 
 </web-app>

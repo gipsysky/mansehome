@@ -18,7 +18,7 @@
         <div class="board-list" data-aos="fade-down" data-aos-delay="400">
             <div class="board-header">
                 <ul>
-                    <li> </li>
+                    <li> 번호 </li>
                     <c:forEach items="${fldList }" var="fldList">
                         <li>${fldList.fld_name }</li>
                     </c:forEach>
@@ -27,10 +27,8 @@
             <ul class="board3">
               <c:forEach items="${dataList }" var="list" varStatus="status">
                   <li onClick="move('${list.idTbl_data}','${list.pw ne null && list.pw ne '' ? 1 : 0}')">
-
-                      <!--번호
-                      <a href=""><c:out value="${ (pageMaker.total - status.index) - (pageMaker.cri.pageNum - 1) * pageMaker.cri.amount }"/></a>
-					  -->
+ 
+                      <span class="no"><c:out value="${ (pageMaker.total - status.index) - (pageMaker.cri.pageNum - 1) * pageMaker.cri.amount }"/></span> 
 
                   <c:set var="v" value=""/>
                   <c:forEach items="${fldList }" var="fldList">

@@ -168,10 +168,10 @@ novalidate name="form" id="form" enctype="multipart/form-data" >
 					<dt>담당자를 소개해 주세요. </dt>
 					<dd>
 						<div class="row">
-							<div class="col-12 col-md-6"><input type="text" name="fld2" placeholder="회사명" class="form-control"></div>
-							<div class="col-12 col-md-6"><input type="text" name="fld1" placeholder="담당자 이름" class="form-control"></div>
-							<div class="col-12 col-md-6"><input type="text" name="fld5" placeholder="연락처" class="form-control" inputmode="numeric" pattern="[0-9]*"></div>
-							<div class="col-12 col-md-6"><input type="email" name="fld6" placeholder="이메일" class="form-control"></div>
+							<div class="col-12 col-md-6"><input type="text" name="fld2" placeholder="회사명" class="form-control" maxlength="20"></div>
+							<div class="col-12 col-md-6"><input type="text" name="fld1" placeholder="담당자 이름" class="form-control" maxlength="10"></div>
+							<div class="col-12 col-md-6"><input type="text" name="fld5" placeholder="연락처" class="form-control" inputmode="numeric" pattern="[0-9]*" maxlength="20"></div>
+							<div class="col-12 col-md-6"><input type="email" name="fld6" placeholder="이메일" class="form-control" maxlength="30"></div>
 						</div>
 					</dd>
 					<div class="checkbox">

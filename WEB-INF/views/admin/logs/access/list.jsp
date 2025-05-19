@@ -15,8 +15,7 @@
             <th>날짜</th>
             <th>시간</th>
             <th>페이지 URL</th>
-            <th>IP 주소</th>
-            <th>User-Agent</th>
+            <th>IP 주소</th> 
         </tr>
         </thead>
         <tbody>
@@ -26,8 +25,7 @@
                 <td><c:out value="${log.access_Date}"/></td>
                 <td><c:out value="${log.access_Time}"/></td>
                 <td><c:out value="${log.url_desc}"/></td>
-                <td><c:out value="${log.ip_Address}"/></td>
-                <td><c:out value="${log.user_Agent}"/></td>
+                <td><c:out value="${log.ip_Address}"/></td> 
             </tr>
         </c:forEach>
         </tbody>

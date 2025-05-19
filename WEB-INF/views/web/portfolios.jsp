@@ -1179,7 +1179,7 @@
                 <div class="grid">
                     <div class="movie">
                         <div class="frame">
-                            <iframe width="1250" height="703" src="https://www.youtube.com/embed/DXHtn76KmdA" title="[30초] 2016년 오로나민C 광고! 전현무+홍진영" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                            <iframe width="1250" height="703" src="https://www.youtube.com/embed/DXHtn76KmdA?loop=1&playlist=DXHtn76KmdA&rel=0" title="[30초] 2016년 오로나민C 광고! 전현무+홍진영" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                         </div>
                     </div>
                     <div class="left"><img src="/img/pf_detail21_1.png" alt=""></div>
@@ -1237,6 +1237,12 @@
                 $('body, html').animate({scrollTop:0}, '1000');
             }
 			document.querySelector('.close-btn').addEventListener('click', function () {
+				// iframe을 초기화해서 강제로 영상 멈춤
+				var $iframe = $('.modal iframe');
+				var src = $iframe.attr('src');
+				
+				$iframe.attr('src', '');          // 강제로 멈춤
+				$iframe.attr('src', src);         // 다시 셋팅 (필요시)				
 			  $.modal.close();
 			});
 			

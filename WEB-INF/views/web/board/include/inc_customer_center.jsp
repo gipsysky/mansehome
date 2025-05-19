@@ -4,6 +4,9 @@
 
 <%@ include file="/WEB-INF/views/global.jsp" %>
 
+<style>
+	.top-title .tab-nav li {font-size:1.125rem;font-weight: bold;}
+</style>
 
 <div class="top-title">
     <h2 data-aos="fade-left">CS Center</h2>
